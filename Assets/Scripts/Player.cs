@@ -13,7 +13,7 @@ public class Player : MonoBehaviour
     private Rigidbody2D rg2d;
     private SpriteRenderer sr;
     public float jumpHeight;
-    private bool isJumping = false;
+    public bool isJumping = false;
 
 
     // Start is called before the first frame update
@@ -26,10 +26,15 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W) && !isJumping) // both conditions can be in the same branch
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W)) // both conditions can be in the same branch
         {
-            rg2d.AddForce(Vector2.up * jumpHeight,ForceMode2D.Impulse); // you need a reference to the RigidBody2D component
-            isJumping = true;
+            if(isJumping == false)
+            {
+                rg2d.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse); // you need a reference to the RigidBody2D component
+                isJumping = true;
+            }
+
+            
             print("jumped");
         }
 

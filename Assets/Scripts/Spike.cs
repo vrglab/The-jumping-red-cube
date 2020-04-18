@@ -16,7 +16,12 @@ public class Spike : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player")
         {
-            p.Death();
+
+            if(p.isDead == false)
+            {
+                p.Death();
+            }
+           
         }
     }
 }

@@ -5198,9 +5198,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ps: {fileID: 8613839926647812729}
   isDead: 0
-  speed: 3.48
+  speed: 9.36
   deathPanel: {fileID: 5318958688837028547}
-  jumpHeight: 12.26
+  jumpHeight: 36.7
+  isJumping: 0
 --- !u!50 &3973558548027116426
 Rigidbody2D:
   serializedVersion: 4
@@ -5213,7 +5214,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1.96
+  m_Mass: 4.59
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
