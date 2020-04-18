@@ -14,6 +14,8 @@ public class Player : MonoBehaviour
     private SpriteRenderer sr;
     public float jumpHeight;
     public bool isJumping = false;
+    public AudioSource JumpSound;
+    public AudioSource DeathSound;
 
 
     // Start is called before the first frame update
@@ -32,6 +34,10 @@ public class Player : MonoBehaviour
             {
                 rg2d.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse); // you need a reference to the RigidBody2D component
                 isJumping = true;
+                if(!JumpSound.isPlaying)
+                {
+                    JumpSound.Play();
+                }
             }
 
             
@@ -61,6 +67,11 @@ public void Death()
             ps.Play();
         }
         sb.TriggerShake();
+        if(!DeathSound.isPlaying)
+        {
+            DeathSound.Play();
+        }
+        this.enabled = false;
         deathPanel.SetActive(true);
         isDead = true;
     }
