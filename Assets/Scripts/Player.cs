@@ -32,7 +32,7 @@ public class Player : MonoBehaviour
         {
             if(isJumping == false)
             {
-                rg2d.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse); // you need a reference to the RigidBody2D component
+                rg2d.AddForce(Vector2.up * jumpHeight , ForceMode2D.Impulse); // you need a reference to the RigidBody2D component
                 isJumping = true;
                 if(!JumpSound.isPlaying)
                 {
@@ -43,8 +43,11 @@ public class Player : MonoBehaviour
             
             print("jumped");
         }
-
-        rg2d.AddForce(new Vector2(speed, 0), ForceMode2D.Force);
+        if(Input.GetKey(KeyCode.D))
+        {
+            rg2d.AddForce(new Vector2(speed, 0), ForceMode2D.Impulse);
+        }
+        
         
     }
     private void OnCollisionEnter2D(Collision2D collision)

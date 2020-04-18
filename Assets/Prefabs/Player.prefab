@@ -5200,7 +5200,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ps: {fileID: 8613839926647812729}
   isDead: 0
-  speed: 9.36
+  speed: 0.4
   deathPanel: {fileID: 5318958688837028547}
   jumpHeight: 36.7
   isJumping: 0
