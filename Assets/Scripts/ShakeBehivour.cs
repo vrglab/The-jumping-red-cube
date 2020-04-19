@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class ShakeBehivour : MonoBehaviour
 {
-    // Transform of the GameObject you want to shake
+   
     private Transform transform;
 
-    // Desired duration of the shake effect
+
     private float shakeDuration = 0f;
 
-    // A measure of magnitude for the shake. Tweak based on your preference
+
     private float shakeMagnitude = 0.7f;
 
-    // A measure of how quickly the shake effect should evaporate
+
     private float dampingSpeed = 1.0f;
 
-    // The initial position of the GameObject
+
     Vector3 initialPosition;
 
     void Awake()
