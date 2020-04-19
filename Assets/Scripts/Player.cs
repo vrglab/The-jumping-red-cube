@@ -44,11 +44,14 @@ public class Player : MonoBehaviour
             
             print("jumped");
         }
-      
-           
-       
-        
-        
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+
+
+
     }
 
     void FixedUpdate()

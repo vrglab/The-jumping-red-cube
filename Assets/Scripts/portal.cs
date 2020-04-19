@@ -3,17 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Menu : MonoBehaviour
+public class portal : MonoBehaviour
 {
-    public void GotoLevel()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
-
-    public void Quit()
-    {
-        Application.Quit();
-    }
-
-    
 }
